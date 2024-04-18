@@ -150,9 +150,27 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+// using modulus (%) operator
+
+// function computeRemainder(num1, num2) {
+//   let remainder = num1 % num2
+//   if (num2 === 0){
+//     return Infinity
+//   }
+//   return remainder
+// }
 
 
+// without using the modulus (%) operator 
 
+function computeRemainder (num1, num2){
+  sum = parseInt(num1 / num2)
+  remainder = sum * num2
+  if (num2 === 0){
+    return Infinity
+  }
+  return num1 - remainder
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 06-range
