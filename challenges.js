@@ -116,10 +116,16 @@ addList(1,50,1.23) //=> 52.23
 addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
+function addList(prev){
+  let sum = 0 
+  for(let i=0; i<arguments.length; i++){
+  sum += arguments[i]
+  }
+  return sum
+}
 
 
-
-
+// Utilized an example from Stack Overflow to solve this problem -https://stackoverflow.com/questions/38566788/return-sum-of-all-arguments-passed-to-function
 
 /*-----------------------------------------------------------------------------
 Challenge: 05-computeRemainder
