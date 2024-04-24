@@ -252,7 +252,15 @@ removeEnds('a') //=> "" (empty string)
 -----------------------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
+function removeEnds (str){
+  //returns string with first and last letter removed - 
+  // length < 3 return empty str[]
+  let charac 
+  if(str < 3){
+    return charac = ''
+  }
+  return str.slice(1, -1)
+}
 
 
 
