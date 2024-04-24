@@ -198,11 +198,12 @@ range(5,2) //=> "First argument must be less than second"
 function range (num1, num2){
   let intArrays = []
   // let integer = num2 - 1
-  if (num1 > num2) {
-    return "First argument must be less than second"
-  }
   for (let i = num1; i < num2; i++){
     intArrays.push(i)
+  }
+
+  if (num1 > num2) {
+    return "First argument must be less than second"
   }
   return intArrays
 }
@@ -227,9 +228,11 @@ reverseUpcaseString("SEI Rocks!") //=> "!SKCOR IES"
 -----------------------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
-
-
+function reverseUpcaseString (str){
+  // returns the characters in reverse -reverse()
+  // convert all characters to uppercase - toUpperCase()
+  return str.split('').reverse().join('').toUpperCase()
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 08-removeEnds
