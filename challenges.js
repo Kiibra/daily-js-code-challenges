@@ -116,7 +116,7 @@ addList(1,50,1.23) //=> 52.23
 addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
-function addList(prev){
+function addList(){
   let sum = 0 
   for(let i=0; i<arguments.length; i++){
   sum += arguments[i]
@@ -195,6 +195,17 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+function range (num1, num2){
+  let intArrays = []
+  // let integer = num2 - 1
+  if (num1 > num2) {
+    return "First argument must be less than second"
+  }
+  for (let i = num1; i < num2; i++){
+    intArrays.push(i)
+  }
+  return intArrays
+}
 
 
 
