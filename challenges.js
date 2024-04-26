@@ -301,7 +301,22 @@ charCount('Today is fantastic!')
 }
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
-
+function charCount (str){
+// object that returns count of character in string
+// the characters should display how many times they appear in the string
+// count upper and lower case characters separately 
+// count space characters 
+const count = {}
+// let i = 0
+for (let i=0; i < str.length; i++) {
+    if (count[str[i]] !== undefined){
+      count[str[i]]++
+    }else{
+      count[str[i]] = 1
+    }
+  }
+  return count
+}
 
 
 
