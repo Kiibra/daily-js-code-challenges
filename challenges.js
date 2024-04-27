@@ -319,8 +319,6 @@ for (let i=0; i < str.length; i++) {
 }
 
 
-
-
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -334,8 +332,10 @@ Prompt:
     "pad" the returned string to a minimum length.
   - Another numeric argument (an integer) representing the length to pad
     the returned string to.
+
 - The function should return the integer as a string, left padded to the 
   length of the 3rd arg using the character provided in the 2nd arg.
+
 - If the length of the integer converted to a string is equal or greater than 
   the 3rd argument, no padding is needed - just return the integer as a string.
 
@@ -347,8 +347,15 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
-
+function formatWithPadding(num, char, numlength) {
+  const numStr = num.toString()
+  const paddingLength = numlength - numStr.length
+  if (paddingLength <= 0) {
+    return numStr
+  } else {
+    return char.repeat(paddingLength) + numStr
+  }
+}
 
 
 /*-----------------------------------------------------------------------------
