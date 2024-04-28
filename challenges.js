@@ -469,8 +469,7 @@ function mumble(str){
   let count = []
   for(let i=0; i < str.length; i++){
     count.push(str[i].repeat([i + 1]))
-    console.log(count)
-
+    // console.log(count)
   }
   return count.join('-')
 }
@@ -498,10 +497,18 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs(arr){
+  let result = {}
+  for(let i=0; i < arr.length; i++){
+    let key = arr[i][0]
+    let value = arr[i][1]
+    result[key] = value
+}
+  return result
+}
 
 
-
-
+// fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 },
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
 
