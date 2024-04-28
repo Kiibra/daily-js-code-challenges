@@ -357,7 +357,6 @@ function formatWithPadding(num, char, numlength) {
   }
 }
 
-
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -382,10 +381,25 @@ isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
+function isPalindrome(str){
+  // str == str.split('').reverse().join(' ')
+  // if( str.length === 0 || 1){
+  //   return true
+  // }else if(!str.length)
+  // return false
+  let charStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+  for(let i = 0; i < charStr.length/2; i++) {
+    if (charStr[i] !== charStr[charStr.length -1 - i]) {
+      return false
+  }
+}
+return true
+}
 
 
 
 
+//resolved using this examples from this https://stackoverflow.com/questions/14813369/palindrome-check-in-javascript/41303263 & https://www.techbaz.org/scripts/js-palindrome.php sites
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
 
