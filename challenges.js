@@ -426,9 +426,22 @@ hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
 
+function hammingDistance(str1, str2){
+  let count = 0
+  if (str1.length === str2.length){
+    for(let i = 0; i < str1.length; i++){
+      if (str1.toLowerCase()[i] !== str2.toLowerCase()[i]){
+        count++
+      }
+      }
+    }else{
+      return NaN
+  }
+  return count
+}
 
 
-
+// resolved using an example from @ https://dev.to/ebereplenty/algorithm-101-3-ways-to-find-hamming-distance-45mo
 
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
