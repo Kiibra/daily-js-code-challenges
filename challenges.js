@@ -430,7 +430,7 @@ function hammingDistance(str1, str2){
   let count = 0
   if (str1.length === str2.length){
     for(let i = 0; i < str1.length; i++){
-      if (str1.toLowerCase()[i] !== str2.toLowerCase()[i]){
+      if (str1[i] !== str2[i]){
         count++
       }
       }
@@ -465,8 +465,15 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+function mumble(str){
+  let count = []
+  for(let i=0; i < str.length; i++){
+    count.push(str[i].repeat([i + 1]))
+    console.log(count)
 
-
+  }
+  return count.join('-')
+}
 
 
 
