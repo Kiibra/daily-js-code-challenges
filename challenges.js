@@ -535,7 +535,19 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
-
+function mergeObjects (obj1, ...objs){
+  // let objs = {}
+  // obj1.forEach(obj => {
+  //   obj1 = {obj1, obj2}
+  // });
+  // return a
+  objs.forEach(obj => {
+    for(let pair in obj){
+      obj1[pair] = obj[pair]
+    }
+  })
+  return obj1
+}
 
 
 
