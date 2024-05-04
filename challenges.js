@@ -589,11 +589,31 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
+function findHighestPriced(arr){
+//   let highestNum =arr[0]
+//   console.log(highestNum)
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > highestNum) {
+//         highestNum = arr[i]
+//     }
+//   }
+//   return highestNum
+let highestNum=0
+arr.forEach(obj => {
+  if(obj.price > highestNum) highestNum= obj.price
+})
+return arr.find(obj => obj.price === highestNum)
+}
+
+[
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 5 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+]
 
 
-
-
-
+// e @ https://builtin.com/articles/javascript-array-max
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
 
