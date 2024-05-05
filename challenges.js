@@ -687,8 +687,8 @@ functionality of JavaScript's Array.prototype.reduce method.
       the previous iteration 
     2. The current element
     3. The index of the current iteration
-- On the first iteration, provide the third argument passed to reduceArray as 
-  the first argument when invoking the callback. For subsequent iterations, 
+  On the first iteration, provide the third argument passed to reduceArray as 
+  the first argument when invoking the callback.- For subsequent iterations, 
   provide the value returned by the callback during the previous iteration.
 
 Examples:
@@ -710,8 +710,32 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //=> {"Yes": 2, "No": 1, "Maybe": 1}
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
+function reduceArray(arr, callbackFn, val){
+//  successfully sums an array of numbers
+// considers index
+// counts votes
 
 
+// callbackFn's last returl value
+// let acc = val
+// return acc
+// acc = return of callbackFn
+let acc = val 
+
+// this below is what I and Doribel were able to work towards before watching Notion video. 
+// loop over arr and invoke callback
+// callbackFn arg acc, el, i
+  // for(i=0; i < arr.length; i++){
+  //   acc = callbackFn(acc, el, i)
+  //   return acc + val
+  // }
+
+//below we used our previose params and arugemnts to solve the exercise 
+  arr.forEach((el, i) => {
+  acc = callbackFn(acc, el, i)
+  })
+  return acc
+}
 
 
 /*-----------------------------------------------------------------------------
