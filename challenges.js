@@ -598,6 +598,8 @@ function findHighestPriced(arr){
 //     }
 //   }
 //   return highestNum
+
+// was able to solve exercise with example provided in Notion 
 let highestNum=0
 arr.forEach(obj => {
   if(obj.price > highestNum) highestNum= obj.price
@@ -605,12 +607,12 @@ arr.forEach(obj => {
 return arr.find(obj => obj.price === highestNum)
 }
 
-[
-  { sku: 'a1', price: 25 },
-  { sku: 'b2', price: 5 },
-  { sku: 'c3', price: 50 },
-  { sku: 'd4', price: 10 }
-]
+// [
+//   { sku: 'a1', price: 25 },
+//   { sku: 'b2', price: 5 },
+//   { sku: 'c3', price: 50 },
+//   { sku: 'd4', price: 10 }
+// ]
 
 
 // e @ https://builtin.com/articles/javascript-array-max
@@ -648,6 +650,16 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
 
+function mapArray (arr, fn){
+  let newArray = []
+  for(i = 0; i < arr.length; i++){
+    //
+    newArray.push(fn(arr[i], i))
+  }
+
+  return newArray
+
+}
 
 
 
