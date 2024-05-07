@@ -661,7 +661,16 @@ function mapArray (arr, fn){
 
 }
 
-
+// another solution done by classmate Seun 
+// function mapArray(array, callback) {
+//   let newArray = []
+//   let index = 0
+//   for (const element of array) {
+//     newArray.push(callback(element, index))
+//     index++
+//   }
+//   return newArray
+// }
 
 
 /*-----------------------------------------------------------------------------
@@ -715,7 +724,6 @@ function reduceArray(arr, callbackFn, val){
 // considers index
 // counts votes
 
-
 // callbackFn's last returl value
 // let acc = val
 // return acc
@@ -760,8 +768,18 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
+function isPrime (num){
+  // let prime = (num - Math.floor(num)) !== 0
+  // if(num == num.Math.floor(num)) return true
 
-
+  if (num < 2 || Math.floor(num) !== num) return false
+    for (let i=2; i < num; i++){
+      if(num % i === 0 )
+        return false
+      }
+  
+  return true
+}
 
 
 
